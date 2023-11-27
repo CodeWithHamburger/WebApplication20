@@ -4,7 +4,9 @@ using WebApplication20.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddHostedService<BackgroundWorkerService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
